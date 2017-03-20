@@ -58,7 +58,7 @@
               <div class="card-content">
                 <p>Modified on Mar 20, 2017</p>
                 <p>欢迎在 <b>Github issues</b> 和我一起讨论有关话题~ 也可以关注我的新浪微博</p>
-                <p>（PS：该列表并没有以时间/喜爱度排序，只是想起来就加上去。）</p>
+                <p>（PS：该列表并没有具体的排序，想起来就加上去，当然排在前面的大都是真爱。）</p>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">其它信息</h5>
-            <p class="grey-text text-lighten-4">Created by 烧饼 <a href="https://github.com/fython" class="grey-text text-lighten-1">@fython</a> on September 26, 2015</p>
+            <p class="grey-text text-lighten-4">Created by {{ author }} <a href="https://github.com/{{ author_github_name }}" class="grey-text text-lighten-1">@{{ author_github_name }}</a> on September 26, 2015</p>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">相关链接</h5>
@@ -109,44 +109,10 @@
   </div>
 
   <!-- Init -->
-  <script type="text/javascript">
-    $(document).ready(function() {
-        $('select').material_select();
-        $('.button-collapse').sideNav({
-            menuWidth: 300,
-            edge: 'left',
-            closeOnClick: true,
-            draggable: true
-          }
-        );
-        $('.parallax').parallax();
-    });
-  </script>
+  <script type="text/javascript" src="js/init.index.js"></script>
 
-  <!-- Vue -->
-  <script>
-	 new Vue({
-     el: '#app',
-     data: {
-       title: '　补番 List',
-       menus: [
-         { text: '作者微博', link: 'http://weibo.com/fython'},
-         { text: 'Github', link: 'https://github.com/fython/To-Watch-Bangumi-List' }
-       ],
-
-       items: [
-         {
-            title: '绯弹的亚里亚',
-            intro:'虽然在以前初一初二的时候就已经看过天降之物和出包王女，我还是认为初三看的这部亚里亚才是我的入宅作。钉宫配的傲娇萝莉太萌啦~',
-            link: 'http://bangumi.bilibili.com/anime/2993',
-            pic: 'http://i0.hdslb.com/bfs/bangumi/52385016afa0a7fd0e47ae169d9933dde893f7ee.jpg_225x300.jpg'
-         }
-       ]
-     },
-     methods: {
-     }
-   })
-   </script>
+  <!-- Vue (Data) -->
+  <script src="js/vue.index.js"></script>
 
 </body>
 </html>
