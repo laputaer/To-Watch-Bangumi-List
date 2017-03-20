@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>To Watch Bangumi List</title>
+  <meta name="theme-color" content="#4a148c">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="js/vue.min.js"></script>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    #header_card {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 800px;
+      margin-top: 36px;
+      margin-bottom: 36px
+    }
+    #header_card_container {
+      margin-top: 280px
+    }
+    .itempic {
+      min-height: 240px;
+      max-height: 250px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      background-size:cover
+    }
+    .container {
+      margin-top: 16px
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Nav Bar -->
+    <nav class="nav-extended">
+    <div class="nav-wrapper pink">
+      <a href="#" class="brand-logo">{{ title }}</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li v-for="menu in menus">
+          <a href="{{ menu.link }}">{{ menu.text }}</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="parallax-container">
+      <div class="section" id="header_card_container">
+          <div class="card horizontal" id="header_card">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>Modified on Mar 20, 2017</p>
+                <p>欢迎在 <b>Github issues</b> 和我一起讨论有关话题~ 也可以关注我的新浪微博</p>
+                <p>（PS：该列表并没有以时间/喜爱度排序，只是想起来就加上去。）</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="parallax"><img src="images/hidan_no_aria_background.jpg" alt="Hidan no Aria"></div>
+    </div>
+
+    <!-- List -->
+    <div class="container">
+      <div class="row s12">
+        <div class="col s4" v-for="item in items">
+          <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator itempic" style="background-image:url( {{ item.pic }} )">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{ item.title }}<i class="material-icons right">more_vert</i></span>
+              <p><a href="{{ item.link }}">补番通道</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{ item.title }}<i class="material-icons right">close</i></span>
+              <p>{{ item.intro }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">其它信息</h5>
+            <p class="grey-text text-lighten-4">Created by 烧饼 <a href="https://github.com/fython" class="grey-text text-lighten-1">@fython</a> on September 26, 2015</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">相关链接</h5>
+            <ul><li v-for="menu in menus"><a class="grey-text text-lighten-3" href="{{ menu.link }}">{{ menu.text }}</a></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2017 Fung Go</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Init -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('select').material_select();
+        $('.button-collapse').sideNav({
+            menuWidth: 300,
+            edge: 'left',
+            closeOnClick: true,
+            draggable: true
+          }
+        );
+        $('.parallax').parallax();
+    });
+  </script>
+
+  <!-- Vue -->
+  <script>
+	 new Vue({
+     el: '#app',
+     data: {
+       title: '　To Watch Bangumi List',
+       menus: [
+         { text: '作者微博', link: 'http://weibo.com/fython'},
+         { text: 'Github', link: 'https://github.com/fython/To-Watch-Bangumi-List' }
+       ],
+
+       items: [
+         {
+            title: '绯弹的亚里亚',
+            intro:'虽然在以前初一初二的时候就已经看过天降之物和出包王女，我还是认为初三看的这部亚里亚才是我的入宅作。钉宫配的傲娇萝莉太萌啦~',
+            link: 'http://bangumi.bilibili.com/anime/2993',
+            pic: 'http://i0.hdslb.com/bfs/bangumi/52385016afa0a7fd0e47ae169d9933dde893f7ee.jpg_225x300.jpg'
+         }
+       ]
+     },
+     methods: {
+     }
+   })
+   </script>
+
+</body>
+</html>
