@@ -1,15 +1,28 @@
+<!-- 顶部卡片内容，请在 template 变量中修改要显示的 HTML 内容 -->
+Vue.component('header-card-content', {
+  template: '<p>Modified on Mar 20, 2017</p><p>欢迎在 <b>Github issues</b> 和我一起讨论有关话题~ 也可以关注我的新浪微博</p>'
+  + '<p>（PS：该列表并没有具体的排序，想起来就加上去，当然排在前面的大都是真爱。）</p>'
+})
+
 new Vue({
   el: '#app',
   data: {
+    <!-- 网页信息 -->
     title: '　补番 List',
     author: '烧饼',
     author_github_name: 'fython',
     copyright_author: 'Fung Go (fython)',
+
+    <!-- 顶部背景 -->
+    header_image: 'images/hidan_no_aria_background.jpg',
+
+    <!-- 底部/移动端 Navigation Drawer 链接 -->
     menus: [
       { text: '作者微博', link: 'http://weibo.com/fython'},
       { text: 'Github 源码', link: 'https://github.com/fython/To-Watch-Bangumi-List' }
     ],
 
+    <!-- 列表信息，建议使用 ../mkdata.py 脚本导入数据，详情请阅读 ../README.md -->
     items: [
       { title:'绯弹的亚里亚', intro:'虽然在以前初一初二的时候就已经看过天降之物和出包王女，我还是认为初三看的这部亚里亚才是我的入宅作。钉宫配的傲娇萝莉太萌啦~', link:'http://bangumi.bilibili.com/anime/2993', pic:'http://lain.bgm.tv/pic/cover/l/ed/fc/10226_m4mvu.jpg' },
 			{ title:'绯弹的亚里亚AA', intro:'亚里亚的外传动画，我就当作是第二季的替代品，变成百合番也无所谓能看到亚里亚就ok！然而亚里亚怎么变帅了？？', link:'http://bangumi.bilibili.com/anime/2764', pic:'http://lain.bgm.tv/pic/cover/l/1b/d3/120224_9Hpcq.jpg' },

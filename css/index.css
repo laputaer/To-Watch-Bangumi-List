@@ -1,0 +1,22 @@
+#header_card {
+  margin-left: 24px;
+  margin-right: 24px;
+  max-width: 800px;
+  margin-top: 36px;
+  margin-bottom: 36px
+}
+#header_card_container {
+  margin-top: 280px
+}
+.itempic {
+  min-height: 280px;
+  max-height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover
+}
+.container {
+  margin-top: 16px
+}

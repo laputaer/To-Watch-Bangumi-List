@@ -3,37 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>补番 List</title>
+
+  <!-- Chrome Title Bar Color -->
   <meta name="theme-color" content="#e91e63">
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="js/vue.min.js"></script>
   <link rel="stylesheet" href="css/materialize.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    #header_card {
-      margin-left: 24px;
-      margin-right: 24px;
-      max-width: 800px;
-      margin-top: 36px;
-      margin-bottom: 36px
-    }
-    #header_card_container {
-      margin-top: 280px
-    }
-    .itempic {
-      min-height: 280px;
-      max-height: 300px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      -webkit-background-size:cover;
-      -moz-background-size:cover;
-      background-size:cover
-    }
-    .container {
-      margin-top: 16px
-    }
-  </style>
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <div id="app">
@@ -56,14 +36,12 @@
           <div class="card horizontal" id="header_card">
             <div class="card-stacked">
               <div class="card-content">
-                <p>Modified on Mar 20, 2017</p>
-                <p>欢迎在 <b>Github issues</b> 和我一起讨论有关话题~ 也可以关注我的新浪微博</p>
-                <p>（PS：该列表并没有具体的排序，想起来就加上去，当然排在前面的大都是真爱。）</p>
+                <header-card-content />
               </div>
             </div>
           </div>
       </div>
-      <div class="parallax"><img src="images/hidan_no_aria_background.jpg" alt="Hidan no Aria"></div>
+      <div class="parallax"><img src="{{ header_image }}" alt="Parallax Image"></div>
     </div>
 
     <!-- List -->
@@ -75,7 +53,7 @@
               <img class="activator itempic" style="background-image:url( {{ item.pic }} )">
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">{{ item.title }}<i class="material-icons right">more_vert</i></span>
+              <span class="card-title activator grey-text text-darken-4">{{ item.title }}<i class="material-icons right">comment</i></span>
               <p><a href="{{ item.link }}">补番通道</a></p>
             </div>
             <div class="card-reveal">
@@ -102,7 +80,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">© 2017 Fung Go</div>
+        <div class="container">© 2017 {{ copyright_author }}</div>
       </div>
     </footer>
 
