@@ -2,11 +2,27 @@
 
 > 使用 [Materialize](https://github.com/Dogfalo/materialize) + [Vue.js](https://vuejs.org/) (1.x, 用作数据绑定) 写的静态网页，用于展示个人的补番列表。
 
+---
+
 ## 说明
 
-为了方便数据添加，我用 Python 写了一个 Vue 代码的生成器
+为了方便数据添加，我用 Python 写了一个 Vue 代码的生成器。但网站标题、相关链接、个人信息等内容仍需在 `index.htm` 和 `./js/index.vue.js(.sample)` 中修改。
 
 ## 使用方法
+
+#### 个人信息
+
+请修改这些文件填充自己的个人信息。
+
+**index.htm** 仅用于修改网页样式和标题
+
+**./js/index.vue.js(.sample)** 用于修改下列内容：
+
+- 顶栏标题
+- 顶部卡片内容、背景图片
+- 作者信息、Github 地址
+- 相关链接（与移动端显示的侧栏菜单内容相同）
+- Copyright 署名
 
 #### 数据
 
@@ -15,8 +31,6 @@
 ```
 绯弹的亚利亚 钉宫大法好 http://bangumi.bilibili.com/anime/2993 封面地址 true(是否已补完番)
 ```
-
-**其余可修改的内容请直接查看源码。**
 
 #### 生成
 
