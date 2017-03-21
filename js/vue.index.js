@@ -32,7 +32,12 @@ new Vue({
 			{ title:'某科学的超电磁炮', intro:'', link:'http://bangumi.bilibili.com/anime/425', pic:'http://lain.bgm.tv/pic/cover/l/36/e7/2585_bXs9U.jpg', finished:true },
 			{ title:'某科学的超电磁炮S', intro:'', link:'http://bangumi.bilibili.com/anime/427', pic:'http://lain.bgm.tv/pic/cover/l/99/8c/51928_6lEYy.jpg', finished:true },
 			{ title:'龙与虎', intro:'', link:'http://bangumi.bilibili.com/anime/1672', pic:'http://lain.bgm.tv/pic/cover/l/a4/30/909_e5zhk.jpg', finished:true },
-			{ title:'灼眼的夏娜', intro:'', link:'http://bangumi.bilibili.com/anime/1600', pic:'http://lain.bgm.tv/pic/cover/l/c4/10/490_kuz6S.jpg', finished:true }
+			{ title:'灼眼的夏娜', intro:'', link:'http://bangumi.bilibili.com/anime/1600', pic:'http://lain.bgm.tv/pic/cover/l/c4/10/490_kuz6S.jpg', finished:true },
+			{ title:'天降之物', intro:'', link:'http://bangumi.bilibili.com/anime/971', pic:'http://lain.bgm.tv/pic/cover/l/75/e3/2617_7c8Cr.jpg', finished:true },
+			{ title:'约会大作战', intro:'', link:'http://bangumi.tv/subject/49131', pic:'http://lain.bgm.tv/pic/cover/l/99/08/49131_CIPjC.jpg', finished:true },
+			{ title:'魔法科高校的劣等生', intro:'', link:'http://bangumi.tv/subject/84872', pic:'http://lain.bgm.tv/pic/cover/l/66/95/84872_22Kz1.jpg', finished:true },
+			{ title:'元气囝仔', intro:'', link:'http://www.iqiyi.com/a_19rrgif715.html', pic:'http://lain.bgm.tv/pic/cover/l/95/70/83868_u7Y2P.jpg', finished:true },
+			{ title:'一拳超人', intro:'', link:'http://list.youku.com/show/id_z0b39c5b6569311e5b2ad.html', pic:'http://lain.bgm.tv/pic/cover/l/8c/a2/127563_nl66u.jpg', finished:true }
     ]
   },
   methods: {
