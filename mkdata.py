@@ -3,7 +3,7 @@
 
 import sys
 
-ITEM_TEMPLATE = '{{ title:\'{title}\', intro:\'{intro}\', link:\'{link}\', pic:\'{pic}\' }}'
+ITEM_TEMPLATE = '{{ title:\'{title}\', intro:\'{intro}\', link:\'{link}\', pic:\'{pic}\', finished:{finished} }}'
 
 def convert(path):
     try:
@@ -21,10 +21,10 @@ def convert(path):
     count = 0
     for line in lines:
         item = line.split(" ")
-        if len(item) != 4:
+        if len(item) != 5:
             print('该行内容无效：' + line + '\n')
         else:
-            data += '\t\t\t' + ITEM_TEMPLATE.format(title = item [0], intro = item [1], link = item [2], pic = item [3].rstrip('\n')) + ',\n'
+            data += '\t\t\t' + ITEM_TEMPLATE.format(title = item [0], intro = item [1], link = item [2], pic = item [3], finished = item[4].rstrip('\n')) + ',\n'
             count += 1
             print('第' + str(count) + '项转换成功：' + item [0])
     data = data.strip().rstrip(',')
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     if len(sys.argv) < 2:
         print('To Watch Bangumi List 网页数据生成工具 0.1\n')
         print('运行参数示范：python {0} MyList.txt\n'.format(sys.argv[0]))
-        print('数据格式为多行由空格分割的内容，例如：\"绯弹的亚利亚 入宅作 番剧地址 图片地址\"')
+        print('数据格式为多行由空格分割的内容，例如：\"绯弹的亚利亚 入宅作 番剧地址 图片地址 是否已看完(true or false)\"')
     elif len(sys.argv) > 2:
         print('请不要输入过多的参数。正确范例：python {0} MyList.txt\n'.format(sys.argv[0]))
     else:

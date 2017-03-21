@@ -13,7 +13,7 @@
 编写一个 `mydata.txt` 作为列表数据源，用空格将每行数据内容分割开，如：
 
 ```
-绯弹的亚利亚 钉宫大法好 http://bangumi.bilibili.com/anime/2993 封面地址
+绯弹的亚利亚 钉宫大法好 http://bangumi.bilibili.com/anime/2993 封面地址 true(是否已补完番)
 ```
 
 **其余可修改的内容请直接查看源码。**
